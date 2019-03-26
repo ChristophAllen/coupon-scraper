@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  string: MyString
+  value: MyString
+  string: MyString
+  repeaters: MyString
+  array: MyString
+  total: MyString
+  string: MyString
+  store: MyString
+  string: MyString
+  link: MyString
+  string: MyString
+
+two:
+  title: MyString
+  string: MyString
+  value: MyString
+  string: MyString
+  repeaters: MyString
+  array: MyString
+  total: MyString
+  string: MyString
+  store: MyString
+  string: MyString
+  link: MyString
+  string: MyString

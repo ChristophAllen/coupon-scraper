@@ -1,0 +1,2 @@
+module TargetcouponHelper
+end

@@ -1,0 +1,12 @@
+<h1> TargetCoupon Show Page </h1>
+
+<h3><%= @products.length %> products in the <%= @store %> DB</h3>
+<p> Should be no more than <%= @products.first.total %> items.  Current count is <%= @products.length %>  </p>
+
+<% @products.each do |x| %>
+    <p>Store: <%= x.store %> </p>
+    <p>Title: <%= x.title %> </p>
+    <p>Value: <%= x.value %> </p>
+    <p> <%= button_to 'Destroy', x, method: :delete %> </p>    
+    <br>
+<% end %>

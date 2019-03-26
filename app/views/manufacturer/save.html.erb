@@ -1,0 +1,7 @@
+<h1> Manufacturer HTML Page </h1>
+
+<p> <%= @products.length %> </p>
+
+<% @products.each do |x| %>
+    <p> <%= x.text %> </p>
+<% end %>

@@ -1,0 +1,8 @@
+<h1> Should be the Save Page for Meijer </h1>
+
+<p> <%= @products.length %> products in the Meijer DB</p>
+
+<% @products.each do |x| %>
+    <p>Title: <%= x.title %> </p>
+    <p>Value: <%= x.value %> </p>
+<% end %>

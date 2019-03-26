@@ -1,0 +1,26 @@
+<h1>DoubleRepeaters Show Page</h1>
+<p> <b> TripleSave: </b> <%= @l.length %> </p>
+<% @k.each do |x|  %>
+    <p> <b> <%= x.to_s %>: </b> <%= x.all.length %> </p>
+<% end %>  
+<br>
+<h1>TripleSave</h1>
+<% @products.each do |z| %>
+    <% if z.triplesave == true %>
+        <p><b><%= z.store1.capitalize %>:</b> <a href= "<% z.link1 %>"> <%= z.title1 %>  <% if z.copies != nil %> (<%= z.copies %> copies of this coupon.) <% end %></a> </p>
+        <p><b><%= z.store2.capitalize %>:</b> <a href= "<% z.link2 %>"> <%= z.title2 %> <% if z.copies != nil %> (<%= z.copies %> copies of this coupon.) <% end %> </a> </p>
+        <p><b><%= z.store3.capitalize %>:</b> <a href= "<% z.link3 %>"> <%= z.title3 %> <% if z.copies != nil %> (<%= z.copies %> copies of this coupon.) <% end %> </a> </p>
+        <p><b>Repeaters</b> <%= z.repeaters %> </p>
+        <p> <%= button_to 'Destroy', z, method: :delete %> </p>
+    <% end %>
+<% end %>
+<br>
+<h1>DoubleSave</h1>
+<% @products.each do |z| %>
+    <% if z.triplesave == false %>
+        <p><b><%= z.store1.capitalize %>:</b> <a href= "<% z.link1 %>"> <%= z.title1 %>  <% if z.copies != nil %> (<%= z.copies %> copies of this coupon.) <% end %></a> </p>
+        <p><b><%= z.store2.capitalize %>:</b> <a href= "<% z.link2 %>"> <%= z.title2 %> <% if z.copies != nil %> (<%= z.copies %> copies of this coupon.) <% end %> </a> </p>
+        <p><b>Repeaters</b> <%= z.repeaters %> </p>
+        <p> <%= button_to 'Destroy', z, method: :delete %> </p>
+    <% end %>
+<% end %>

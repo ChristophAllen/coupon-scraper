@@ -1,0 +1,41 @@
+<h1>Everywhere Coupon Mix</h1>
+<p> <%= @store %> </p>
+<h1>AllTime Show Page</h1>
+
+<br>
+
+<% @k.each do |x|  %>
+    <p> <b> <%= x.to_s %>: </b> <%= x.all.length %> </p>
+<% end %>  
+
+<p> <b> TripleSave: </b> <%= @l.length %> </p>
+
+<br><br>
+
+<p><b>TripleSave</b></p>
+
+<% @l.each do |z| %>
+    <p><b><%= z.store1 %>:</b> <a href= "<% z.link1 %>"> <%= z.title1 %> </a> </p>
+    <p><b><%= z.store2 %>:</b> <a href= "<% z.link2 %>"> <%= z.title2 %> </a> </p>
+    <p><b><%= z.store3 %>:</b> <a href= "<% z.link3 %>"> <%= z.title3 %> </a> </p>
+    <p><b>Values: </b> <%= z.value1 %> + <%= z.value2 %> + <%= z.value3 %> </p>
+    <p><b>Repeaters: </b> <%= z.repeaters %> </p>
+    <br><br>
+<% end %>
+
+
+<br><br>
+
+<% @k.each do |y| %>
+    <p><b> <%= y.to_s %>: </b></p>
+    <% y.all.each do |z| %>
+        <% if @store.downcase == z.store1.downcase || @store.downcase == z.store2.downcase %>
+            <p><b><%= z.store1.capitalize %>:</b> <a href= "<% z.link1 %>"> <%= z.title1 %>  <% if z.copies != nil %> (<%= z.copies %> copies of this coupon.) <% end %></a> </p>
+            <p><b><%= z.store2.capitalize %>:</b> <a href= "<% z.link2 %>"> <%= z.title2 %> <% if z.copies != nil %> (<%= z.copies %> copies of this coupon.) <% end %> </a> </p>
+            <p><b>Repeaters</b> <%= z.repeaters %> </p>
+            <br><br>
+        <% end %>
+    <% end %>
+        
+    <br><br>
+<% end %>

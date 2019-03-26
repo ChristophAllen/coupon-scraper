@@ -1,0 +1,2 @@
+module Newcheckout51Helper
+end

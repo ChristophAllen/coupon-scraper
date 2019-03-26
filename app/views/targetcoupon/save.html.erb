@@ -1,0 +1,15 @@
+<h1> Look at me I'm Saving! </h1>
+
+<h3><%= @products.length %> products in the <%= @store %> DB</h3>
+<p> Should be no more than <%= @productsLength %> items.  Current count is <%= @products.length %>.   </p>
+
+
+<% @products.each do |x| %>
+    <p> Price: <%= x.h4.text %> </p>
+    <p> Title: <%= x.h5.text %> </p>
+    <p> Text: <%= x.p.text %> </p>
+<% end %>
+
+
+<!--<p> <b> <= @products.length %> </b> products in the <b> TargetCoupon </b> DB. </p>-->
+<!--<p> Should be no more than <b> <= @products.first.total %> <b/> items.  Otherwise it's fked up.  </p>-->

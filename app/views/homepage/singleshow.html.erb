@@ -1,0 +1,13 @@
+<h1>This should be the show page for <%= @store %> SingleShow</h1>
+
+
+<h3><%= @products.length %> products in the <%= @store %> DB</h3>
+<p> Should be no more than <%= @products.first.total %> items.  Current count is <%= @products.length %>.   </p>
+
+<% @products.each do |x| %>
+    <p>TITLE: <a href= <%= x.link %>> <%= x.title %> </a> </p>
+    <p>VALUE: <%= x.value %> </p>
+    <p>STORE: <%= x.store %> </p>
+    <!--<p> <= link_to 'Destroy', x, method: :delete %> </p> -->
+    <p> <%= button_to 'Destroy', x, method: :delete %> </p> 
+<% end %>

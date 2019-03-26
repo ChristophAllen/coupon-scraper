@@ -1,0 +1,33 @@
+<%= javascript_include_tag :application %>
+
+<h1>Index HomePage</h1>
+
+<br>
+
+<%show_options = [['Select For Show', ''],['iBotta Show','homepage/singleshow/ibotta'],
+['Checkout51 Show','homepage/singleshow/checkout51'],['TargetCoupon Show','targetcoupon/show'],['SavingStar Show','homepage/singleshow/savingstar'],
+['Publix Show','homepage/singleshow/publix'],['HEB Show','homepage/singleshow/heb'],['Meijer Show','homepage/singleshow/meijer'],
+['HyVee Show','homepage/singleshow/hyvee'],['Albertsons Show','homepage/singleshow/albertson'],['Smith2 Show','homepage/singleshow/smith2'],['Kroger Show','kroger/show']]%>
+
+<%save_options = [['Select For Save', ''],['iBotta Save','ibotta/save'],
+['Checkout51 Save','checkout51/save'],['TargetCoupon Save','targetcoupon/save'],['SavingStar Save','savingstar/save'],['Publix Save','publix/save'],
+['HEB Save','heb/save'],['Meijer Save','meijer/save'],['HyVee Save','hyvee/save'],['Albertsons Save','albertson/save'],['Smith2 Save','smith2/save'],['Kroger Save','kroger/save']]%>
+
+<%delete_options = [['Select For Delete', ''],['iBotta Delete','homepage/singledelete/ibotta'],
+['Checkout51 Delete','homepage/singledelete/checkout51'],['TargetCoupon Delete','homepage/singledelete/targetcoupon'],
+['SavingStar Delete','homepage/singledelete/savingstar'],['Publix Delete','homepage/singledelete/publix'],['HEB Delete','homepage/singledelete/heb'],
+['Meijer Delete','homepage/singledelete/meijer'],['HyVee Delete','homepage/singledelete/hyvee'],['Albertsons Delete','homepage/singledelete/albertson'],['Smith2 Delete','homepage/singledelete/smith2'],['Kroger Delete','kroger/delete'],['Delete All','homepage/deleteall']]%>
+
+<%= select_tag "store-selects", options_for_select(save_options),:onchange => "self.location='/'+this.options[this.selectedIndex].value", class: "your_class" %>
+<%= select_tag "store-selects", options_for_select(show_options),:onchange => "self.location='/'+this.options[this.selectedIndex].value", class: "your_class" %>
+<%= select_tag "store-selects", options_for_select(delete_options),:onchange => "self.location='/'+this.options[this.selectedIndex].value", class: "your_class" %>
+
+<br> <br> <br>
+
+<%alltime_options = [['Select For AllTime Options', ''],['AllTime Save',"homepage/alltimesave"],['AllTime Show','homepage/alltimeshow'],
+['AllTime Delete','homepage/alltimedelete'],['Double Save','doublesavers/save'],['Double Show','doublesavers/show'],['Double Delete','doublesavers/delete']]%>
+
+<%= select_tag "store-selects", options_for_select(alltime_options),:onchange => "self.location='/'+this.options[this.selectedIndex].value", class: "your_class" %>
+
+
+<p> <a href="https://rails-tutorial2-chriscma.c9users.io/homepage/stores"> Stores </a> </p>

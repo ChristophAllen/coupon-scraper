@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title1: MyString
+  title2: MyString
+  value1: MyString
+  value2: MyString
+  link1: MyString
+  link2: MyString
+  repeater: 
+  store1: MyString
+  store2: MyString
+
+two:
+  title1: MyString
+  title2: MyString
+  value1: MyString
+  value2: MyString
+  link1: MyString
+  link2: MyString
+  repeater: 
+  store1: MyString
+  store2: MyString
